@@ -115,6 +115,7 @@ b.c{color:var(--copper)}b.i{color:var(--iron)}b.g{color:var(--goldm)}
 <section class="page" id="page-lots">
  <h1>Lots</h1>
  <p class="lead">Ranked by how much they earn <b>right now</b>, re-sorting with the live market. Below: what to dig by game stage, and the special lots on their own fixed prices.</p>
+ <div class="card" id="m3-explainer" style="margin-bottom:14px"></div>
  <h2>Most money right now</h2>
  <table><thead><tr><th>#</th><th>Lot</th><th>Ore</th><th class="num">Permit</th><th>Ore band (game)</th><th>Value now (game model, today's market)</th><th>Why</th></tr></thead><tbody id="lotrows"></tbody></table>
  <div class="disc">Ranked by what <b>one m³ of ore is worth after the first plant</b> (crusher for iron, copper and silver; wash plant for gold and platinum) at <b>today's market</b>, from the game's own numbers: lot grades, prices, densities, ridge premiums and plant multipliers (see Lot facts). "Full Rigid Haul" = one heaped 32 m³ truck. The smelter (×1.6) and the train (+10%) come on top for iron and copper; the Gold Room (+20%) and train for gold and platinum. Oil leases (#13) have no ore — their line shows one pump jack's settled income. The swamps (#15, #16) also earn oil on top of what is shown.</div>
@@ -130,6 +131,7 @@ b.c{color:var(--copper)}b.i{color:var(--iron)}b.g{color:var(--goldm)}
 <section class="page" id="page-guides">
  <h1>Lot guides</h1>
  <p class="lead">Every lot in depth: how deep to dig, what gear &amp; plants you need, rough spend, the outcome, and a ★ rating for how it pays vs the rest. The green “From the game” line under each lot has the exact numbers.</p>
+ <p class="note" style="margin:0 0 8px">All prices are per m³ (a 1 × 1 × 1 m block of ore — a bit more than one scoop of the Rusty 8T). The <a class="link" data-p="lots">Lots</a> page explains it with examples.</p>
  <div id="setup-host"></div>
  <div id="guides-body"></div>
 </section>
@@ -688,6 +690,25 @@ function setupValue(n){
 function helpFig(id){const H=(typeof GAMECFG!=='undefined'&&GAMECFG.help_images)||{},x=H[id];if(!x)return '';
  return '<figure class="helpfig"><img src="'+esc(x.file)+'" alt="'+esc(x.title)+'" loading="lazy"><figcaption>'+esc(x.title)+' — drawing from the game\'s COMPANY › HELP</figcaption></figure>';}
 function renderHelpImages(){document.querySelectorAll('.helpimg').forEach(el=>{el.innerHTML=(el.dataset.help||'').split(',').map(helpFig).join('');});}
+// ---- "What does $/m³ mean?" explainer on the Lots page (example lot, live market, the game's machine sizes)
+function renderM3(){
+ const box=$id('m3-explainer');if(!box||typeof GAMECFG==='undefined')return;
+ const N=9,L=LOTS.find(l=>l.n===N),cv=computedValue(N,mkNowFor('copper')||100);if(!cv||!L){box.innerHTML='';return;}
+ const M=nm=>GM().find(m=>m.name===nm);
+ const rows=[['1 m³ (one 1 × 1 × 1 m block)',1],
+  ['One scoop, Rusty 8T Excavator',(M('Rusty 8T Excavator')||{cap:0.8}).cap],
+  ['One scoop, 36T Excavator',(M('36T Excavator')||{cap:2.2}).cap],
+  ['One scoop, 120T Mining Excavator',(M('120T Mining Excavator')||{cap:6.5}).cap],
+  ['Full Rusty Tip Truck (heaped)',(M('Rusty Tip Truck')||{cap:6}).cap*1.43],
+  ['Full Rigid Haul Truck (heaped)',(M('Rigid Haul Truck')||{cap:32}).cap*1.43],
+  ['Full Ultra Haul Truck (heaped)',(M('Ultra Haul Truck')||{cap:100}).cap*1.43]];
+ box.innerHTML='<div class="name">What does “$ per m³” mean?</div>'
+  +'<div style="font-size:13.5px;margin-top:6px;line-height:1.6"><b>m³</b> (cubic metre) is how the game measures ore — the dealer lists buckets and truck bodies in m³ too. Think of a block of ore <b>1 m long, 1 m wide, 1 m tall</b>. That is a bit more than <b>one full scoop of the Rusty 8T</b> (0.8 m³), and the <b>Rusty Tip Truck</b> holds 6 m³ (about 8 when heaped).<br>'
+  +'So “$ per m³” is like a price per kilo: <b>multiply it by what your bucket or truck holds</b>. Example — <b>#'+N+' '+esc(L.name)+'</b> at today\'s copper market:</div>'
+  +'<table style="margin-top:6px"><thead><tr><th>What you fill</th><th class="num">About m³</th><th class="num">Sold raw</th><th class="num">After the crusher</th></tr></thead><tbody>'
+  +rows.map(r=>'<tr><td>'+r[0]+'</td><td class="num">'+(r[1]>=10?Math.round(r[1]):(+r[1]).toFixed(1))+'</td><td class="num">'+money(cv.raw*r[1])+'</td><td class="num"><b>'+money(cv.pro*r[1])+'</b></td></tr>').join('')
+  +'</tbody></table><div class="note">“Heaped” = a FULL truck holds about 1.43× its rated size. Clean ore only — dirt or rock in the load lowers it. Pick your own excavator and truck in <a class="link" data-p="guides">Lot guides</a> or the <a class="link" data-p="calc">Calculator</a>.</div>';
+}
 function renderMachines(){
  const host=$id('mach-gen');if(!host||typeof GAMECFG==='undefined')return;
  const TN=GAMECFG.type_names||{},LB=gmOf('low'),RAT=GAMECFG.lowboy_ratings||[];
@@ -1286,6 +1307,7 @@ function render(d){
  let rows='',rk=0;
  for(const s of scored){rk++;const l=s.l,w=Math.max(4,Math.round(100*s.v/maxv));const why=REALP[l.n]?('<span class="price">'+REALP[l.n]+'</span> · '+l.note):l.note;const modeled='';rows+='<tr class="'+(rk===1?'top':'')+'"><td><span class="rank">'+rk+'</span></td><td><b>'+l.n+'</b> '+l.name+modeled+'</td><td><span class="tag '+ORECLS[l.ore]+'">'+l.ore+'</span></td><td class="num"><span class="price">'+permitOf(l)+'</span></td><td class="note">'+l.band+'</td><td><div class="bar"><i style="width:'+w+'%"></i></div><div style="margin-top:3px">'+lotValueText(l)+'</div></td><td class="note">'+why+'</td></tr>';}
  fill('lotrows',rows);
+ try{renderM3();}catch(e){}
  // stages
  fill('stages',STAGES.map(st=>{const ranked=st.lots.map(n=>LOTS.find(l=>l.n===n)).map(l=>({l,v:scoreLot(l,mkt)})).sort((a,b)=>b.v-a.v);const inner=ranked.map((s,i)=>{const l=s.l;const extra=REALP[l.n]?' <span class="note">('+REALP[l.n]+')</span>':'';return '<div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0'+(i===0&&fresh?';color:var(--gold);font-weight:700':'')+'"><span>'+(i+1)+'. #'+l.n+' '+l.name+extra+'</span><span class="tag '+ORECLS[l.ore]+'">'+l.ore+'</span></div>';}).join('');return '<div class="card"><div class="name">'+st.name+'</div><div style="margin-top:6px">'+inner+'</div><div class="note" style="margin-top:9px">'+st.tip+'</div></div>';}).join(''));
  if(fresh){const win=scored[0];document.getElementById('mfoot').textContent='updated '+new Date(d.ts*1000).toLocaleTimeString()+'  ·  best metal to sell: '+best.toUpperCase()+'  ·  top lot now: #'+win.l.n+' '+win.l.name;}
