@@ -2,91 +2,669 @@
  "start": {
   "title": "First loads",
   "group": "Getting started",
-  "file": "img/help/123331405838020.png"
+  "file": "img/help/123331405838020.png",
+  "keys": [
+   [
+    0.5625,
+    0.0361,
+    0.6362,
+    0.0806,
+    "Space",
+    "TIP"
+   ]
+  ]
  },
  "kexc": {
   "title": "Excavator controls",
   "group": "Machines",
-  "file": "img/help/72973882411489.png"
+  "file": "img/help/72973882411489.png",
+  "keys": [
+   [
+    0.7525,
+    0.0411,
+    0.8262,
+    0.0856,
+    "E",
+    "MODE"
+   ],
+   [
+    0.7525,
+    0.6511,
+    0.8262,
+    0.6956,
+    "W A S D",
+    "Left stick"
+   ],
+   [
+    0.7525,
+    0.2311,
+    0.8262,
+    0.2756,
+    "A D",
+    "Left stick ←→"
+   ],
+   [
+    0.0125,
+    0.2311,
+    0.0862,
+    0.2756,
+    "↑ ↓",
+    "Right stick ↑↓"
+   ],
+   [
+    0.0125,
+    0.0411,
+    0.0862,
+    0.0856,
+    "→ ←",
+    "Right stick ←→"
+   ],
+   [
+    0.0125,
+    0.6511,
+    0.0862,
+    0.6956,
+    "Space",
+    "DIG"
+   ],
+   [
+    0.0125,
+    0.4411,
+    0.0862,
+    0.4856,
+    "F",
+    "OPEN"
+   ],
+   [
+    0.3075,
+    0.0261,
+    0.4012,
+    0.0706,
+    "T",
+    "DUMP IN TRUCK"
+   ],
+   [
+    0.7525,
+    0.4411,
+    0.8262,
+    0.4856,
+    "Q",
+    "GET OUT"
+   ]
+  ]
+ },
+ "kexc_sim": {
+  "title": "Excavator controls (SIM controls)",
+  "group": "Machines",
+  "file": "img/help/91551658971344.png",
+  "keys": [
+   [
+    0.7525,
+    0.0411,
+    0.8262,
+    0.0856,
+    "E",
+    "MODE"
+   ],
+   [
+    0.7525,
+    0.6511,
+    0.8262,
+    0.6956,
+    "W A S D",
+    "Left stick"
+   ],
+   [
+    0.7525,
+    0.2311,
+    0.8262,
+    0.2756,
+    "A D",
+    "Left stick ←→"
+   ],
+   [
+    0.0125,
+    0.0411,
+    0.0862,
+    0.0856,
+    "↑ ↓",
+    "Right stick ↑↓"
+   ],
+   [
+    0.0125,
+    0.2311,
+    0.0862,
+    0.2756,
+    "W S",
+    "Left stick ↑↓"
+   ],
+   [
+    0.0125,
+    0.4411,
+    0.0862,
+    0.4856,
+    "← →",
+    "Right stick ←→"
+   ],
+   [
+    0.3075,
+    0.0261,
+    0.3812,
+    0.0706,
+    "X Z",
+    "THR + / -"
+   ],
+   [
+    0.7525,
+    0.4411,
+    0.8262,
+    0.4856,
+    "Q",
+    "GET OUT"
+   ]
+  ]
  },
  "kdoz": {
   "title": "Dozer controls",
   "group": "Machines",
-  "file": "img/help/73821385000804.png"
+  "file": "img/help/73821385000804.png",
+  "keys": [
+   [
+    0.7725,
+    0.6311,
+    0.8462,
+    0.6756,
+    "W A S D",
+    "Left stick"
+   ],
+   [
+    0.0125,
+    0.4811,
+    0.0862,
+    0.5256,
+    "↑ ↓",
+    "BLADE UP / DN"
+   ],
+   [
+    0.0125,
+    0.2111,
+    0.0862,
+    0.2556,
+    "E",
+    "ANGLE"
+   ],
+   [
+    0.7725,
+    0.3711,
+    0.8462,
+    0.4156,
+    "X Z",
+    "THR + / -"
+   ],
+   [
+    0.7725,
+    0.1411,
+    0.8462,
+    0.1856,
+    "Q",
+    "GET OUT"
+   ]
+  ]
  },
  "ktrk": {
   "title": "Dump truck controls",
   "group": "Machines",
-  "file": "img/help/120518629493430.png"
+  "file": "img/help/120518629493430.png",
+  "keys": [
+   [
+    0.0125,
+    0.7711,
+    0.0862,
+    0.8156,
+    "W A S D",
+    "Left stick"
+   ],
+   [
+    0.3075,
+    0.0361,
+    0.3812,
+    0.0806,
+    "Space",
+    "TIP"
+   ],
+   [
+    0.0125,
+    0.4111,
+    0.0862,
+    0.4556,
+    "H",
+    "HORN"
+   ],
+   [
+    0.4375,
+    0.8511,
+    0.5112,
+    0.8956,
+    "Q",
+    "GET OUT"
+   ]
+  ]
  },
  "kldr": {
   "title": "Loader controls",
   "group": "Machines",
-  "file": "img/help/78346570062061.png"
+  "file": "img/help/78346570062061.png",
+  "keys": [
+   [
+    0.7525,
+    0.6311,
+    0.8262,
+    0.6756,
+    "W A S D",
+    "Left stick"
+   ],
+   [
+    0.0125,
+    0.2511,
+    0.0862,
+    0.2956,
+    "↑ ↓",
+    "LIFT / LOWER"
+   ],
+   [
+    0.0125,
+    0.5111,
+    0.0862,
+    0.5556,
+    "← →",
+    "Right stick ←→"
+   ],
+   [
+    0.7525,
+    0.1911,
+    0.8262,
+    0.2356,
+    "Q",
+    "GET OUT"
+   ]
+  ]
  },
  "kute": {
   "title": "Ute and fuel trailer",
   "group": "Machines",
-  "file": "img/help/85756818528993.png"
+  "file": "img/help/85756818528993.png",
+  "keys": [
+   [
+    0.7625,
+    0.0361,
+    0.8362,
+    0.0806,
+    "W A S D",
+    "Left stick"
+   ],
+   [
+    0.2625,
+    0.8011,
+    0.3362,
+    0.8456,
+    "Space",
+    "HITCH"
+   ],
+   [
+    0.2625,
+    0.0361,
+    0.3362,
+    0.0806,
+    "E",
+    "JERRY CAN"
+   ],
+   [
+    0.5125,
+    0.0361,
+    0.5862,
+    0.0806,
+    "H",
+    "HORN"
+   ],
+   [
+    0.5125,
+    0.8011,
+    0.5862,
+    0.8456,
+    "Q",
+    "GET OUT"
+   ]
+  ]
  },
  "klow": {
   "title": "Low-loader controls",
   "group": "Machines",
-  "file": "img/help/137122491328767.png"
+  "file": "img/help/137122491328767.png",
+  "keys": [
+   [
+    0.7525,
+    0.0411,
+    0.8262,
+    0.0856,
+    "W A S D",
+    "Left stick"
+   ],
+   [
+    0.0125,
+    0.0411,
+    0.0862,
+    0.0856,
+    "Space",
+    "LOAD / UNLOAD"
+   ],
+   [
+    0.4975,
+    0.0411,
+    0.5713,
+    0.0856,
+    "H",
+    "HORN"
+   ],
+   [
+    0.7525,
+    0.8111,
+    0.8262,
+    0.8556,
+    "Q",
+    "GET OUT"
+   ]
+  ]
  },
  "katt": {
   "title": "Excavator attachments",
   "group": "Machines",
-  "file": "img/help/127289844816175.png"
+  "file": "img/help/127289844816175.png",
+  "keys": [
+   [
+    0.0125,
+    0.0411,
+    0.0862,
+    0.0856,
+    "B",
+    "SWAP TOOL"
+   ],
+   [
+    0.3575,
+    0.0411,
+    0.4312,
+    0.0856,
+    "Space",
+    "HITCH"
+   ]
+  ]
  },
  "cdig": {
   "title": "The community dig",
   "group": "How it works",
-  "file": "img/help/82971381325800.png"
+  "file": "img/help/82971381325800.png",
+  "keys": []
  },
  "crusher": {
   "title": "Crusher",
   "group": "Plants",
-  "file": "img/help/130119670028264.png"
+  "file": "img/help/130119670028264.png",
+  "keys": []
  },
  "wash": {
   "title": "Gold Wash",
   "group": "Plants",
-  "file": "img/help/78526873832225.png"
+  "file": "img/help/78526873832225.png",
+  "keys": []
  },
  "smelter": {
   "title": "Smelter",
   "group": "Plants",
-  "file": "img/help/123042076270133.png"
+  "file": "img/help/123042076270133.png",
+  "keys": []
  },
  "mwash": {
   "title": "Mobile wash plant",
   "group": "Mobile plant",
-  "file": "img/help/115288043987421.png"
+  "file": "img/help/115288043987421.png",
+  "keys": [
+   [
+    0.3075,
+    0.0311,
+    0.3812,
+    0.0756,
+    "Space",
+    "WASH ON / OFF"
+   ]
+  ]
  },
  "mline": {
   "title": "Crushing line",
   "group": "Mobile plant",
-  "file": "img/help/82528808721558.png"
+  "file": "img/help/82528808721558.png",
+  "keys": []
  },
  "drill": {
   "title": "Drill rig",
   "group": "Oil",
-  "file": "img/help/100240490018879.png"
+  "file": "img/help/100240490018879.png",
+  "keys": [
+   [
+    0.1675,
+    0.0311,
+    0.2413,
+    0.0756,
+    "Space",
+    "DRILL / RIG DOWN"
+   ],
+   [
+    0.6725,
+    0.0311,
+    0.7462,
+    0.0756,
+    "Space",
+    "DRILL / RIG DOWN"
+   ]
+  ]
  },
  "oil": {
   "title": "Oil field",
   "group": "Oil",
-  "file": "img/help/139154205029621.png"
+  "file": "img/help/139154205029621.png",
+  "keys": [
+   [
+    0.4075,
+    0.0261,
+    0.4813,
+    0.0706,
+    "Space",
+    "DRILL / RIG DOWN"
+   ],
+   [
+    0.0125,
+    0.8411,
+    0.0862,
+    0.8856,
+    "Space",
+    "TIP / OIL"
+   ]
+  ]
  },
  "oilbay": {
   "title": "Selling oil",
   "group": "Oil",
-  "file": "img/help/118233116656231.png"
+  "file": "img/help/118233116656231.png",
+  "keys": [
+   [
+    0.7575,
+    0.5661,
+    0.8312,
+    0.6106,
+    "Space",
+    "TIP / OIL"
+   ]
+  ]
  },
  "road": {
   "title": "Road building",
   "group": "Roads",
-  "file": "img/help/118384962166563.png"
+  "file": "img/help/118384962166563.png",
+  "keys": [
+   [
+    0.7075,
+    0.0261,
+    0.7812,
+    0.0706,
+    "Space",
+    "TIP / OIL"
+   ],
+   [
+    0.7075,
+    0.0929,
+    0.7812,
+    0.1373,
+    "E",
+    "DROP / HOOK DOG"
+   ],
+   [
+    0.7075,
+    0.5111,
+    0.7812,
+    0.5556,
+    "↑ ↓",
+    "FOLD / OPEN WINGS"
+   ],
+   [
+    0.5675,
+    0.7461,
+    0.6412,
+    0.7906,
+    "Space",
+    "PAVE ON / OFF"
+   ],
+   [
+    0.5675,
+    0.8129,
+    0.6412,
+    0.8573,
+    "E",
+    "SCREED WIDTH"
+   ],
+   [
+    0.0125,
+    0.3711,
+    0.0862,
+    0.4156,
+    "Space",
+    "SEAL ON / OFF"
+   ]
+  ]
+ },
+ "swamp": {
+  "title": "Working the swamp",
+  "group": "How it works",
+  "tiles": [
+   "img/help/111009458973288.png",
+   "img/help/136336785357652.png",
+   "img/help/87381170047985.png",
+   "img/help/125131443991945.png"
+  ],
+  "keys": [
+   [
+    0.0125,
+    0.6411,
+    0.0862,
+    0.6856,
+    "Space",
+    "PUMP ON / OFF"
+   ]
+  ]
+ },
+ "dwater": {
+  "title": "Dewatering truck",
+  "group": "Mobile plant",
+  "tiles": [
+   "img/help/101710125515521.png",
+   "img/help/105408192931770.png",
+   "img/help/78074844828088.png",
+   "img/help/84796757717569.png"
+  ],
+  "keys": [
+   [
+    0.0125,
+    0.0261,
+    0.0862,
+    0.0706,
+    "Space",
+    "PUMP ON / OFF"
+   ],
+   [
+    0.0125,
+    0.7111,
+    0.0862,
+    0.7556,
+    "Space",
+    "PUMP ON / OFF"
+   ]
+  ]
+ },
+ "grader": {
+  "title": "Motor grader",
+  "group": "Machines",
+  "tiles": [
+   "img/help/109084800740372.png",
+   "img/help/125020866288803.png",
+   "img/help/78557048938406.png",
+   "img/help/132349109065710.png"
+  ],
+  "keys": [
+   [
+    0.0135,
+    0.0461,
+    0.0872,
+    0.0906,
+    "E",
+    "AUTO LEVEL"
+   ],
+   [
+    0.3375,
+    0.8111,
+    0.4113,
+    0.8556,
+    "R F",
+    "UP / DOWN"
+   ],
+   [
+    0.0135,
+    0.3811,
+    0.0872,
+    0.4256,
+    "← →",
+    "ANGLE"
+   ],
+   [
+    0.7765,
+    0.0461,
+    0.8502,
+    0.0906,
+    "Space",
+    "RAMP"
+   ],
+   [
+    0.0135,
+    0.7111,
+    0.0872,
+    0.7556,
+    "G",
+    "RIPPER"
+   ],
+   [
+    0.7765,
+    0.7111,
+    0.8502,
+    0.7556,
+    "W A S D",
+    "DRIVE"
+   ]
+  ]
  }
 }
